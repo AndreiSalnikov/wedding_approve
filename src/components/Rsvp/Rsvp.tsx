@@ -27,7 +27,7 @@ const RsvpContent = () => {
                         </p>
                     ) : null}
                 </div>
-                <p className='font-comforta text-[17px] text-center mb-[20px]'>
+                <p className='font-comforta text-[17px] text-center mb-[20px] text-black'>
                     Мы рады сообщить Вам, что 31.05.2024 состоится самое главное торжество в нашей жизни - день нашей
                     свадьбы!
                     Приглашаем Вас разделить с нами радость этого незабываемого дня.
@@ -36,7 +36,7 @@ const RsvpContent = () => {
                 <p className='font-comforta text-[14px] mb-[40px]'>31.05.2024 в 11:40</p>
                 <Image src={photo} alt='Рита и Андрей улыбаются' width={440} height={380} className='rounded-[200px]' />
                 <p className='text-brown text-[22px] font-scriptorama mb-[30px] mt-[10px]'>Ваши Андрей и Маргарита</p>
-                <p className='text-center font-comforta text-[14px] max-w-[408px] mb-[20px]'>Будем благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры</p>
+                <p className='text-center font-comforta text-[14px] max-w-[408px] mb-[20px] text-black'>Будем благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры</p>
                 <div className="flex mb-[60px]">
                     <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] mr-[10px]"></div>
                     <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] mr-[10px]"></div>
