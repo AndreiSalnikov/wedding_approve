@@ -1,10 +1,19 @@
 'use client'
-import React from 'react';
-import {useSearchParams} from 'next/navigation';
+import React, { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Image from "next/image";
-import photo from "../../../public/img/love.jpg"
+import photo from "../../../public/img/love.jpg";
+
 const Rsvp = () => {
-    const searchParams = useSearchParams()
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <RsvpContent />
+        </Suspense>
+    );
+};
+
+const RsvpContent = () => {
+    const searchParams = useSearchParams();
     const name1 = searchParams.get('name1');
     const name2 = searchParams.get('name2');
     const isSingleName = name1 && !name2;
@@ -13,7 +22,7 @@ const Rsvp = () => {
         <div className='bg-rsvp h-[1060px] w-full mt-[100px] bg-[length:428px] flex flex-col items-center'>
             <div className='flex flex-col items-center max-w-[490px] bg-whitealpha p-[10px]'>
                 <div className='max-w-[550px] p-[30px] '>
-                    {name1 ?? name2 ? (
+                    {name1 || name2 ? (
                         <p className='text-[36px] font-scriptorama text-brown'>{isSingleName ? 'Дорогой' : 'Дорогие'} {name1} {name2 && `и ${name2}!`}
                         </p>
                     ) : null}
@@ -25,7 +34,7 @@ const Rsvp = () => {
                 </p>
                 <p className='font-scriptorama text-brown text-[32px] mb-[20px]'>Ждём вас</p>
                 <p className='font-comforta text-[14px] mb-[40px]'>31.05.2024 в 11:40</p>
-                <Image src={photo} alt='Рита и Андрей улыбаются' width={440} height={380} className='rounded-[200px]'/>
+                <Image src={photo} alt='Рита и Андрей улыбаются' width={440} height={380} className='rounded-[200px]' />
                 <p className='text-brown text-[22px] font-scriptorama mb-[30px] mt-[10px]'>Ваши Андрей и Маргарита</p>
                 <p className='text-center font-comforta text-[14px] max-w-[408px] mb-[20px]'>Будем благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры</p>
                 <div className="flex mb-[60px]">
