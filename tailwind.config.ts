@@ -8,7 +8,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      'comic-neue': ['Comic Neue', 'sans-serif'],
+        'comic-neue': ['Comic Neue', 'sans-serif'],
+       // 'comic-neue': ['Neue Bold', 'sans-serif'],
       'scriptorama': ['Scriptorama', 'sans-serif'],
       'comforta': ['Comfortaa-VariableFont_wght','sans-serif']
     },

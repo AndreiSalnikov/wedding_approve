@@ -9,6 +9,12 @@
         font-weight: 300;
         font-style: normal;
     }
+    /*@font-face {*/
+    /*    font-family: 'Neue Bold';*/
+    /*    src: url('../fonts/HelveticaNeueLight.otf') format('opentype');*/
+    /*    font-weight: 300;*/
+    /*    font-style: normal;*/
+    /*}*/
     @font-face {
         font-family: 'Scriptorama';
         src: url('../fonts/scriptorama.ttf') format('truetype');
