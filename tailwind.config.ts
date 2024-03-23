@@ -14,6 +14,24 @@ const config: Config = {
       'comforta': ['Comfortaa-VariableFont_wght','sans-serif']
     },
     extend: {
+      // margin: {
+      //   calc: 'calc(5vw + 10px)',
+      // },
+      screens: {
+        'mobile-s': '320px',
+        'mobile-s2': '360px',
+        'mobile-s3': '390px',
+        'mobile-s4': '430px'
+      },
+      keyframes: {
+        c: {
+          '0%': {opacity: '0',transform: 'scale(0)'},
+          '100%': {opacity: '1', transform: 'scale(1)'},
+        }
+      },
+      animation: {
+        c: 'c 2s 1 cubic-bezier(.215,.61,.355,1) 0s backwards;',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
