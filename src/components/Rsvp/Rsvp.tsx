@@ -19,7 +19,7 @@ const RsvpContent = () => {
     const isSingleName = name1 && !name2;
 
     return (
-        <div className='bg-rsvp h-[1060px] w-full mt-[100px] bg-[length:428px] flex flex-col items-center'>
+        <div className='bg-rsvp h-[1060px] w-full bg-[length:428px] flex flex-col items-center'>
             <div className='flex flex-col items-center max-w-[490px] bg-whitealpha p-[10px]'>
                 <div className='max-w-[550px] p-[30px] '>
                     {name1 || name2 ? (

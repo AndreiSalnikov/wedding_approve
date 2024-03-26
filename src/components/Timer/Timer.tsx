@@ -24,7 +24,7 @@ function Timer({expiryTimestamp}: TimerProps) {
     const remainingDays = days % 7;
 
     return (
-        <div className='bg-whitealpha flex justify-center font-comic-neue rounded-[40px] text-brown'>
+        <div className='absolute bottom-[10%] m-0 bg-whitealpha flex justify-center font-comic-neue rounded-[40px] text-brown'>
             <div className='flex flex-col text-center mr-[20px]'>
                 <span className='text-[37px] font-bold' suppressHydrationWarning> {addLeadingZero(weeks)}</span>
                 <span className='text-[14px]'>недель</span>
