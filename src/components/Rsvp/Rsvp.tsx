@@ -21,9 +21,9 @@ const RsvpContent = () => {
     return (
         <div className='bg-rsvp h-[1060px] w-full bg-[length:428px] flex flex-col items-center'>
             <div className='flex flex-col items-center max-w-[490px] bg-whitealpha p-[10px]'>
-                <div className='max-w-[550px] p-[30px] '>
+                <div className='mobile-s:pb-[25px] mobile-s3:p-[30px]  '>
                     {name1 || name2 ? (
-                        <p className='text-[36px] font-scriptorama text-brown'>{isSingleName ? 'Дорогой' : 'Дорогие'} {name1} {name2 && `и ${name2}!`}
+                        <p className='mobile-s:text-[30px] mobile-s4:text-[37px] font-scriptorama text-brown whitespace-pre-wrap text-center'>{isSingleName ? 'Дорогой' : 'Дорогие \n'}  {name1} {name2 && `и ${name2}!`}
                         </p>
                     ) : null}
                 </div>

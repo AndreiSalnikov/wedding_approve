@@ -5,14 +5,14 @@ import Timer from "@/components/Timer/Timer";
 const Welcome = () => {
     const expiryDate = new Date('2024-05-31T00:00:00');
 
-    return (
-        <>
+    return (<>
             <div className='transition-all duration-500 ease-out w-full h-full'>
                 <div className='h-screen m-auto w-full transition-all'>
                     <div className='w-full h-full'>
                         <div
                             className='z-5 animate-c mr-0 w-full m-auto absolute right-0 h-full overflow-hidden bg-no-repeat'>
-                            <div className='bg-top transition-all duration-100 ease-out scale-[1.3] bg-welcome top-[13%] m-auto relative w-[90%] h-[72%] bg-no-repeat text-center bg-contain'></div>
+                            <div
+                                className='bg-top transition-all duration-100 ease-out scale-[1.3] bg-welcome top-[13%] m-auto relative w-[90%] h-[72%] bg-no-repeat text-center bg-contain'></div>
                         </div>
 
 
@@ -27,9 +27,8 @@ const Welcome = () => {
                             <p className='animate-d absolute bottom-[20%] mb-[30px] flex flex-col font-comic-neue uppercase text-[10px] tracking-widest text-black'>Приглашаем
                                 на свадьбу <span className='text-[19px] font-scriptorama lowercase text-black'>31 мая 2024</span>
                             </p>
-<Timer expiryTimestamp={expiryDate} autoStart={true}/>
+                            <Timer expiryTimestamp={expiryDate} autoStart={true}/>
                         </div>
-
 
 
                     </div>
@@ -38,8 +37,7 @@ const Welcome = () => {
 
                 {/*</div>*/}
             </div>
-        </>
-    );
+        </>);
 };
 
 export default Welcome;
