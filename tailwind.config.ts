@@ -16,7 +16,8 @@ const config: Config = {
             }, keyframes: {
                 a: {
                     '0%': {opacity: '0', transform: 'scale(0)'}, '100%': {opacity: '1', transform: 'scale(1)'},
-                }, b: {
+                },
+                b: {
                     '0%': {marginTop: '-25%'}, '100%': {marginTop: '0'},
                 },
 
