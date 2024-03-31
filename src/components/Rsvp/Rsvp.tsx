@@ -33,29 +33,24 @@ const RsvpContent = () => {
         setUserid(newId);
     };
 
-    console.log(userid)
-
-    // Call constructId function once on component mount
     useEffect(() => {
         constructId();
 
         const fetchData = async () => {
             try {
-                const status = await getApproveStatus(userid); // Call getApproveStatus function asynchronously
+                const status = await getApproveStatus(userid);
                 // @ts-ignore
-                setApproveWedding(status); // Set approveWedding state with the obtained status
+                setApproveWedding(status);
             } catch (error) {
                 console.error("Error fetching approve status:", error);
             }
         };
 
-        if (userid !== '') { // Ensure userid is not empty before fetching data
-            fetchData(); // Call fetchData function
+        if (userid !== '') {
+            fetchData();
         }
 
     }, [userid]);
-
-// console.log(async ()=> await getApproveStatus(userid))
 
     const onClickNo = async () => {
         try {
@@ -68,10 +63,7 @@ const RsvpContent = () => {
     }
     const onClickYes = async () => {
         try {
-            //   await approve({userId: userid, rsvp: !approveWedding})
             await approve({userId: userid, rsvp: true});
-
-            // Configure confetti bursts
             const burstCount = 50;
             const angle = 60;
             const particleCount = 40;

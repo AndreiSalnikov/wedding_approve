@@ -9,6 +9,7 @@ import {
     getAlcoholStatus,
     getKidStatus
 } from "@/utils/firebase";
+import Popup from "@/components/Popup/Popup";
 
 interface MuiCheckBoxProps {
     userId: string;
@@ -30,14 +31,16 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
         'Полусухое белое': false,
         'Сладкое белое': false,
     });
+    const [popups, setPopups] = useState([]);
+
     useEffect(() => {
 
         const fetchData = async () => {
             try {
-                const statusKid = await getKidStatus(userId); // Call getApproveStatus function asynchronously
+                const statusKid = await getKidStatus(userId);
                 // @ts-ignore
                 setKidStatus(statusKid);
-                const statusAlcohol = await getAlcoholStatus(userId);// Set approveWedding state with the obtained status
+                const statusAlcohol = await getAlcoholStatus(userId);
                 setAlcohol(prevState => {
                     const newState = { ...prevState };
                     for (const key in newState) {
@@ -53,8 +56,8 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
             }
         };
 
-        if (userId !== '') { // Ensure userid is not empty before fetching data
-            fetchData(); // Call fetchData function
+        if (userId !== '') {
+            fetchData();
         }
 
     }, []);
@@ -74,6 +77,14 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
         } else {
             await approveKid({userId,kid:false})
         }
+// @ts-ignore
+        setPopups(prevPopups => [...prevPopups, true]);
+
+        // After 3 seconds, remove the oldest popup
+        setTimeout(() => {
+            setPopups(prevPopups => prevPopups.slice(1));
+        }, 2000);
+
     };
 
     const handelAlcoholChange = async (event: SyntheticEvent<Element, Event>, checked: boolean) => {
@@ -95,8 +106,22 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
 
                     if (checked) {
                         await addAlcohol({userId, drink: value});
+                        // @ts-ignore
+                        setPopups(prevPopups => [...prevPopups, true]);
+
+                        // After 3 seconds, remove the oldest popup
+                        setTimeout(() => {
+                            setPopups(prevPopups => prevPopups.slice(1));
+                        }, 2000);
                     } else {
                         await deleteAlcohol({userId, drink: value})
+                        // @ts-ignore
+                        setPopups(prevPopups => [...prevPopups, true]);
+
+                        // After 3 seconds, remove the oldest popup
+                        setTimeout(() => {
+                            setPopups(prevPopups => prevPopups.slice(1));
+                        }, 2000);
                     }
 
 
@@ -111,6 +136,9 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
 
     return (
         <>
+            {popups.map((_, index) => (
+                <Popup key={index} visible={true} top={30 + index * (80)}/>
+            ))}
             <Box className='text-white'>
                 <FormControl>
                     <FormLabel style={{color: "#fff"}}>Какой алкоголь вы предпочитаете?</FormLabel>

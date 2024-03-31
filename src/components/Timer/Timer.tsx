@@ -14,7 +14,6 @@ function Timer({expiryTimestamp}: TimerProps) {
         days,
     } = useTimer({expiryTimestamp, onExpire: () => console.warn('onExpire called')});
 
-    // Function to add leading zeros to numbers less than 10
     const addLeadingZero = (value: number) => {
         return value < 10 ? `0${value}` : `${value}`;
     };

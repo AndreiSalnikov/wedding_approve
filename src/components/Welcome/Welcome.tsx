@@ -33,9 +33,6 @@ const Welcome = () => {
 
                     </div>
                 </div>
-                {/*<div className="bg-welcome bg-no-repeat bg-contain  relative p-[30px] h-screen w-full">*/}
-
-                {/*</div>*/}
             </div>
         </>);
 };
