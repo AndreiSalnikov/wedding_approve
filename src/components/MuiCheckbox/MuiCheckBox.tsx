@@ -14,6 +14,7 @@ import Popup from "@/components/Popup/Popup";
 interface MuiCheckBoxProps {
     userId: string;
 }
+
 const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
     const [kidStatus, setKidStatus] = useState(false);
     const [alcohol, setAlcohol] = useState({
@@ -41,16 +42,19 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
                 // @ts-ignore
                 setKidStatus(statusKid);
                 const statusAlcohol = await getAlcoholStatus(userId);
-                setAlcohol(prevState => {
-                    const newState = { ...prevState };
-                    for (const key in newState) {
-                        if (key in statusAlcohol) {
-                            // @ts-ignore
-                            newState[key] = statusAlcohol[key];
+                if (statusAlcohol !== null) {
+                    setAlcohol(prevState => {
+                        const newState = {...prevState};
+                        for (const key in newState) {
+                            if (key in statusAlcohol) {
+                                // @ts-ignore
+                                newState[key] = statusAlcohol[key];
+                            }
                         }
-                    }
-                    return newState;
-                });
+                        return newState;
+                    });
+                }
+
             } catch (error) {
                 console.error("Error fetching approve status:", error);
             }
@@ -63,9 +67,6 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
     }, []);
 
 
-
-
-
     const [showRedWineOptions, setShowRedWineOptions] = useState(false);
     const [showWhiteWineOptions, setShowWhiteWineOptions] = useState(false);
 
@@ -73,9 +74,9 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
         // @ts-ignore
         setKidStatus(event.target.value);
         if (event.target.value === 'true') {
-            await approveKid({userId,kid:true})
+            await approveKid({userId, kid: true})
         } else {
-            await approveKid({userId,kid:false})
+            await approveKid({userId, kid: false})
         }
 // @ts-ignore
         setPopups(prevPopups => [...prevPopups, true]);
