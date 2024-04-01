@@ -16,6 +16,18 @@
         font-style: normal;
     }
     @font-face {
+        font-family: 'Patriciana';
+        src: url('../fonts/patriciana.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Corinthia';
+        src: url('../fonts/сorinthia.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
         font-family: 'Scriptorama';
         src: url('../fonts/scriptorama.ttf') format('truetype');
         font-weight: 400;

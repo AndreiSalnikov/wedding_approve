@@ -2,7 +2,7 @@
 import React, {Suspense, useEffect, useState} from 'react';
 import {useSearchParams} from 'next/navigation';
 import Image from "next/image";
-import photo from "../../../public/img/love.jpg";
+import photo from "../../../public/img/00.jpg";
 import {approve, getApproveStatus} from "@/utils/firebase";
 import confetti from 'canvas-confetti';
 import Questions from "@/components/Questions/Questions";
@@ -102,7 +102,7 @@ const RsvpContent = () => {
 
 
     return (
-        <div className='pt-[70px] pb-[70px] bg-rsvp w-full bg-[length:428px] flex flex-col items-center'>
+        <div id='rsvp' className='pt-[70px] pb-[70px] bg-rsvp w-full bg-[length:428px] flex flex-col items-center'>
             <div className='flex flex-col items-center max-w-[490px] bg-whitealpha p-[10px]'>
                 <div className='mobile-s:pb-[25px] mobile-s3:p-[30px]  '>
                     {name1 || name2 ? (
@@ -119,12 +119,12 @@ const RsvpContent = () => {
                 <p className='font-comforta text-[14px] mb-[40px]'>31.05.2024 в 11:40</p>
                 <Image src={photo} alt='Рита и Андрей улыбаются' width={440} height={380} className='rounded-[200px]'/>
                 <p className='text-brown text-[22px] font-scriptorama mb-[30px] mt-[10px]'>Ваши Андрей и Маргарита</p>
-                <p className='text-center font-comforta text-[14px] max-w-[408px] mb-[20px] text-black'>Будем
+                <p id='approve' className='text-center font-comforta text-[14px] max-w-[408px] mb-[20px] text-black'>Будем
                     благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры</p>
-                <div className="flex mb-[60px]">
+                <div  className="flex mb-[60px]">
                     <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] mr-[10px]"></div>
-                    <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] mr-[10px]"></div>
-                    <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] mr-[10px]"></div>
+                    <div className="w-[50px] h-[50px] bg-[#000AAF] opacity-50 rounded-[50%] mr-[10px]"></div>
+                    <div className="w-[50px] h-[50px] bg-yellow-100 opacity-50 rounded-[50%] mr-[10px]"></div>
                     <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] mr-[10px]"></div>
                     <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] "></div>
                 </div>
@@ -150,8 +150,8 @@ const RsvpContent = () => {
                                         уже оповещены об этом ;)
                                     </div>
                                 </div>
-                                <button onClick={onClickNo}
-                                    className='font-comforta bg-white mt-[20px] mb-[20px] rounded-[4px] p-[5px] font-semibold border-[1px] border-gray-300'>Отменить
+                                <button id='approve' onClick={onClickNo}
+                                    className='font-comforta bg-white mt-[20px] mb-[20px] rounded-[4px] p-[5px] font-semibold border-[1px] border-gray-300 text-black'>Отменить
                                     подтверждение
                                 </button>
                             </div>

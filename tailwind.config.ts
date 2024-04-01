@@ -8,7 +8,9 @@ const config: Config = {
             'comic-neue': ['Comic Neue', 'sans-serif'], // 'comic-neue': ['Neue Bold', 'sans-serif'],
             'scriptorama': ['Scriptorama', 'sans-serif'],
             'comforta': ['Comfortaa-VariableFont_wght', 'sans-serif'],
-            'rotunda': ['Rotunda,sans-serif']
+            'rotunda': ['Rotunda,sans-serif'],
+            'patriciana': ['Patriciana,sans-serif'],
+            'corinthia': ['Corinthia,sans-serif']
         }, extend: {
             screens: {
                 'mobile-s': '320px', 'mobile-s2': '360px', 'mobile-s3': '390px', 'mobile-s4': '430px'

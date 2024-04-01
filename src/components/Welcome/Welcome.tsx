@@ -6,7 +6,7 @@ const Welcome = () => {
     const expiryDate = new Date('2024-05-31T00:00:00');
 
     return (<>
-            <div className='transition-all duration-500 ease-out w-full h-full'>
+            <div id='welcome' className='transition-all duration-500 ease-out w-full h-full'>
                 <div className='h-screen m-auto w-full transition-all'>
                     <div className='w-full h-full'>
                         <div
