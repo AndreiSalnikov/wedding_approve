@@ -31,6 +31,7 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
         'Полусладкое белое': false,
         'Полусухое белое': false,
         'Сладкое белое': false,
+        'Не буду пить': false,
     });
     const [popups, setPopups] = useState([]);
 
@@ -308,6 +309,16 @@ const MuiCheckBox: React.FC<MuiCheckBoxProps> = ({userId}) => {
                             />
                             </div>
                         )}
+                        <FormControlLabel
+                            control={<Checkbox icon={<RadioButtonUncheckedIcon/>} checkedIcon={<CheckCircleIcon/>}
+                                               style={{
+                                                   color: "#fff",
+                                               }}/>}
+                            onChange={handelAlcoholChange}
+                            checked={alcohol['Не буду пить']}
+                            value="Не буду пить"
+                            label='Не буду пить'
+                        />
                     </FormGroup>
                 </FormControl>
             </Box>

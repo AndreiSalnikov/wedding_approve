@@ -16,7 +16,7 @@ const Schedule = () => {
                     </div>
                 </div>
                 <div className='flex max-w-[540px] pt-[20px] pl-[20px] pr-[20px]'>
-                    <p className='font-comforta text-[14px] text-left'>15:00
+                    <p className='font-comforta text-[14px] text-left'>14:30
                         31.05.2024</p>
                     <div className='ml-[40px]'>
                         <p className='text-left pl-[10px] font-comforta text-[17px]'>Фуршет <br/>

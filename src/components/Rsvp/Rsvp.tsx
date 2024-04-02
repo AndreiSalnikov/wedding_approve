@@ -122,11 +122,11 @@ const RsvpContent = () => {
                 <p id='approve' className='text-center font-comforta text-[14px] max-w-[408px] mb-[20px] text-black'>Будем
                     благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры</p>
                 <div  className="flex mb-[60px]">
-                    <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] mr-[10px]"></div>
-                    <div className="w-[50px] h-[50px] bg-[#000AAF] opacity-50 rounded-[50%] mr-[10px]"></div>
-                    <div className="w-[50px] h-[50px] bg-yellow-100 opacity-50 rounded-[50%] mr-[10px]"></div>
-                    <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] mr-[10px]"></div>
-                    <div className="w-[50px] h-[50px] bg-black opacity-50 rounded-[50%] "></div>
+                    <div className="w-[50px] h-[50px] bg-[#9896a4] rounded-[50%] mr-[10px]"></div>
+                    <div className="w-[50px] h-[50px] bg-[#b18f6a] rounded-[50%] mr-[10px]"></div>
+                    <div className="w-[50px] h-[50px] bg-[#dbbeac] rounded-[50%] mr-[10px]"></div>
+                    <div className="w-[50px] h-[50px] bg-[#88987d] rounded-[50%] mr-[10px]"></div>
+                    <div className="w-[50px] h-[50px] bg-[#6b7a4f] rounded-[50%]"></div>
                 </div>
                 {!approveWedding && (
                     <button
