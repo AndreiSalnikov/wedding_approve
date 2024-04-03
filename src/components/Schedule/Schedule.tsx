@@ -21,7 +21,7 @@ const Schedule = () => {
                     <div className='ml-[40px]'>
                         <p className='text-left pl-[10px] font-comforta text-[17px]'>Фуршет <br/>
                             <span className='font-corinthia text-[20px]'>Банкетный зал</span></p>
-                        <p className='pt-[20px] text-left text-[15px]'>После росписи и небольшой фотосесси ждём всех в банкетном зале.</p>
+                        <p className='pt-[20px] text-left text-[15px]'>После росписи и небольшой фотосессии ждём всех в банкетном зале.</p>
                     </div>
                 </div>
             </div>
