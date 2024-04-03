@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 interface TimerProps {
     expiryTimestamp: Date;
 }
@@ -9,6 +10,10 @@ const Timer: React.FC<TimerProps> = ({ expiryTimestamp }) => {
         const now = new Date();
         const timezoneOffset = now.getTimezoneOffset() * 60000;
         const localNow = now.getTime() - timezoneOffset;
+
+        console.log(localNow,'localNow')
+        console.log(now,'now')
+        console.log(timezoneOffset,'timezoneOffset')
 
         const difference = expiryTimestamp.getTime() - localNow;
         let timeLeft: { weeks?: number, days?: number, hours?: number, minutes?: number, seconds?: number } = {};
