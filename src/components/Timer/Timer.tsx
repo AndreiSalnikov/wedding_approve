@@ -6,7 +6,11 @@ interface TimerProps {
 
 const Timer: React.FC<TimerProps> = ({ expiryTimestamp }) => {
     const calculateTimeLeft = () => {
-        const difference = expiryTimestamp.getTime() - new Date().getTime();
+        const now = new Date();
+        const timezoneOffset = now.getTimezoneOffset() * 60000;
+        const localNow = now.getTime() - timezoneOffset;
+
+        const difference = expiryTimestamp.getTime() - localNow;
         let timeLeft: { weeks?: number, days?: number, hours?: number, minutes?: number, seconds?: number } = {};
 
         if (difference > 0) {
