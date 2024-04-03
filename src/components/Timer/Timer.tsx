@@ -1,9 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 
 const Timer = () => {
-    const expiryDate = new Date('2024-05-31T00:00:00');
+
     const calculateTimeLeft = () => {
-        const difference = expiryDate.getTime() - new Date().getTime();
+
+        const expiryDate = new Date('2024-05-31T00:00:00Z');
+        const now = new Date();
+        const timezoneOffset = now.getTimezoneOffset() * 60000;
+        const localNow = now.getTime() - timezoneOffset;
+
+        const difference = expiryDate.getTime() - localNow;
+
         let timeLeft: { weeks?: number, days?: number, hours?: number, minutes?: number, seconds?: number } = {};
 
         if (difference > 0) {
@@ -34,7 +41,8 @@ const Timer = () => {
     };
 
     return (
-        <div className='animate-q absolute bottom-[10%] m-0 bg-whitealpha flex justify-center font-comic-neue rounded-[40px] text-brown'>
+        <div
+            className='animate-q absolute bottom-[10%] m-0 bg-whitealpha flex justify-center font-comic-neue rounded-[40px] text-brown'>
             <div className='flex flex-col text-center mr-[20px]'>
                 <span className='mobile-s:text-[30px] mobile-s3:text-[37px] font-bold' suppressHydrationWarning>
                     {addLeadingZero(timeLeft.weeks ?? 0)}
