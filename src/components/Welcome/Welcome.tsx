@@ -4,7 +4,10 @@ import Timer from "@/components/Timer/Timer";
 
 const Welcome = () => {
     const expiryDate = new Date('2024-05-31T00:00:00');
+    const currentDate = new Date();
+    console.log(currentDate)
     console.log(expiryDate)
+
 
     return (<>
             <div id='welcome' className='transition-all duration-500 ease-out w-full h-full'>
