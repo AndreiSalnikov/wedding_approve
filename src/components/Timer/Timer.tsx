@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-interface TimerProps {
-    expiryTimestamp: Date;
-}
-
-const Timer: React.FC<TimerProps> = ({ expiryTimestamp }) => {
+const Timer = () => {
+    const expiryDate = new Date('2024-05-31T00:00:00');
     const calculateTimeLeft = () => {
-        const difference = expiryTimestamp.getTime() - new Date().getTime();
+        const difference = expiryDate.getTime() - new Date().getTime();
         let timeLeft: { weeks?: number, days?: number, hours?: number, minutes?: number, seconds?: number } = {};
 
         if (difference > 0) {

@@ -3,8 +3,6 @@ import React from 'react';
 import Timer from "@/components/Timer/Timer";
 
 const Welcome = () => {
-    const expiryDate = new Date('2024-05-31T00:00:00');
-
     return (<>
             <div id='welcome' className='transition-all duration-500 ease-out w-full h-full'>
                 <div className='h-screen m-auto w-full transition-all'>
@@ -27,7 +25,7 @@ const Welcome = () => {
                             <p className='animate-d absolute bottom-[20%] mb-[30px] flex flex-col font-comic-neue uppercase text-[10px] tracking-widest text-black'>Приглашаем
                                 на свадьбу <span className='text-[19px] font-scriptorama lowercase text-black'>31 мая 2024</span>
                             </p>
-                            <Timer expiryTimestamp={expiryDate}/>
+                            <Timer/>
                         </div>
 
 
