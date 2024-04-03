@@ -4,10 +4,6 @@ import Timer from "@/components/Timer/Timer";
 
 const Welcome = () => {
     const expiryDate = new Date('2024-05-31T00:00:00');
-    const currentDate = new Date();
-    console.log(currentDate)
-    console.log(expiryDate)
-
 
     return (<>
             <div id='welcome' className='transition-all duration-500 ease-out w-full h-full'>
@@ -31,7 +27,7 @@ const Welcome = () => {
                             <p className='animate-d absolute bottom-[20%] mb-[30px] flex flex-col font-comic-neue uppercase text-[10px] tracking-widest text-black'>Приглашаем
                                 на свадьбу <span className='text-[19px] font-scriptorama lowercase text-black'>31 мая 2024</span>
                             </p>
-                            <Timer expiryTimestamp={expiryDate} autoStart={true}/>
+                            <Timer expiryTimestamp={expiryDate}/>
                         </div>
 
 
