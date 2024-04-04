@@ -106,8 +106,9 @@ const RsvpContent = () => {
             <div className='flex flex-col items-center max-w-[490px] bg-whitealpha p-[10px]'>
                 <div className='mobile-s:pb-[25px] mobile-s3:p-[30px]  '>
                     {name1 || name2 ? (
-                        <p className='mobile-s:text-[30px] mobile-s4:text-[37px] font-scriptorama text-brown whitespace-pre-wrap text-center'>{isSingleName ? 'Дорогой' : 'Дорогие \n'} {name1} {name2 && `и ${name2}!`}
-                        </p>
+<p className='mobile-s:text-[30px] mobile-s4:text-[37px] font-scriptorama text-brown whitespace-pre-wrap text-center'>
+    {isSingleName ? 'Дорогой' : 'Дорогие \n'} {name1}{name2 ? ` и ${name2}!` : '!'}
+</p>
                     ) : null}
                 </div>
                 <p className='font-comforta text-[17px] text-center mb-[20px] text-black'>
