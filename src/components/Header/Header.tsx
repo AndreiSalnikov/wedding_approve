@@ -18,7 +18,7 @@ const Header = () => {
     };
     return (<header className="z-[999] animate-a flex bg-brown bg-opacity-[0.37] h-[60px] w-full fixed">
         <div
-            className={`absolute top-[60px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px]  bg-blackbrown  ${menuOpen ? 'opacity-1' : 'opacity-0'} transition-all transition-duration: 300ms`}>
+            className={`absolute top-[60px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px]  bg-blackbrown  ${menuOpen ? 'opacity-1 visible' : 'opacity-0 invisible'} transition-all transition-duration: 300ms`}>
             <ul className='bg-blackbrown pt-[12px] pr-[40px] pb-[25px] pl-[25px]  rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px] text-[15px] font-patriciana text-white'>
                 <li className='mb-[10px]'>
                     <a className='hover:cursor-pointer flex items-center' onClick={() => scrollToSection('welcome')}>
