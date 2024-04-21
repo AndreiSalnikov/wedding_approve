@@ -24,8 +24,6 @@ const Welcome = () => {
                         </p>
                         <Timer/>
                     </div>
-
-
                 </div>
             </div>
         </div>
