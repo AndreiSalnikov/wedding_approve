@@ -117,7 +117,7 @@ const RsvpContent = () => {
                     Приглашаем Вас разделить с нами радость этого незабываемого дня.
                 </p>
                 <p className='font-scriptorama text-brown text-[32px] mb-[20px]'>Ждём вас</p>
-                <p className='font-comforta text-[14px] mb-[40px]'>31.05.2024 в 11:40</p>
+                <p className='font-comforta text-[14px] mb-[40px] text-black'>31.05.2024 в 11:40</p>
                 <Image src={photo} alt='Рита и Андрей улыбаются' width={440} height={380} className='rounded-[200px]'/>
                 <p className='text-brown text-[22px] font-scriptorama mb-[30px] mt-[10px]'>Ваши Андрей и Маргарита</p>
                 <p id='approve'
