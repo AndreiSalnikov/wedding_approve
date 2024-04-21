@@ -1,8 +1,18 @@
 'use client'
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, Suspense} from 'react';
 import {useSearchParams} from "next/navigation";
 import Fireworks from 'fireworks-js';
+
+
 const AnimationComponent = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <AnimationComponentContent/>
+        </Suspense>
+    );
+};
+
+const AnimationComponentContent = () => {
 
     const searchParams = useSearchParams();
     const name1 = searchParams.get('name1');
