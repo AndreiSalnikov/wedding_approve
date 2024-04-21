@@ -60,11 +60,11 @@ const AnimationComponentContent = () => {
                 <div className="interactive-game ">
                     <div className={`z-[9999999999]  absolute top-[1000px] letter ${clickedLetters[0] ? 'text-red-500' : 'opacity-5 text-black'}`} onClick={() => handleClick(0)}>В
                     </div>
-                    <div className={`z-[9999999999]  absolute left-[70%] top-[900px] letter transition- ${clickedLetters[1] ? 'text-red-500' : 'opacity-5 text-black'}`} onClick={() => handleClick(1)}>Л
+                    <div className={`z-[9999999999]  absolute left-[70%] top-[800px] letter transition- ${clickedLetters[1] ? 'text-red-500' : 'opacity-5 text-black'}`} onClick={() => handleClick(1)}>Л
                     </div>
-                    <div className={`z-[9999999999]  absolute left-[60%] top-[1865px] letter ${clickedLetters[2] ? 'text-red-500' : 'opacity-10 text-black'}`} onClick={() => handleClick(2)}>А
+                    <div className={`z-[9999999999]  absolute left-[60%] top-[1728px] letter ${clickedLetters[2] ? 'text-red-500' : 'opacity-10 text-black'}`} onClick={() => handleClick(2)}>А
                     </div>
-                    <div className={`z-[9999999999]  absolute top-[2550px] letter ${clickedLetters[3] ? 'text-red-500' : 'opacity-5 text-black'}`} onClick={() => handleClick(3)}>Д
+                    <div className={`z-[9999999999]  absolute left-[20%] top-[2440px] letter ${clickedLetters[3] ? 'text-red-500' : 'opacity-5 text-black'}`} onClick={() => handleClick(3)}>Д
                     </div>
                 </div>}
 
